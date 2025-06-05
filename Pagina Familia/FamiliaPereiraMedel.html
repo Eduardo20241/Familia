@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FamiliaFuentesPereiraYOlivares</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+  background-color: #64b8ab;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-image: url('IFPO/image\ \(1\).png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 800px 200px;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #9b6161;
+  padding: 0.5rem;
+  position: sticky;
+  top: 136px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+    h2 {
+      color: #000000;
+    }
+    footer {
+  background-color: #778583;
+  color: #0e0e0e;
+  text-align: center;
+  padding: 1rem;
+  background-image: url('Im/image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+    i{
+      font-size: 35px;
+    }
+    @media (max-width: 600px) {
+    .logo {
+      width: 70px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .borde-texto2 {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 0.1px solid #ddd8dd;
+      background-color: #ececec;
+      display: inline-block;
+      padding: 5px;
+    }
+    .borde-texto3 {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 0.1px solid #ddd8dd;
+      background-color: #ececec;
+      display: inline-block;
+      padding: 5px;
+    }
+    .ai {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .a2 {
+      width: 70%;
+      height: 70%;
+      display: block;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+    .a3 {
+      width: 90%;
+      height: 90%;
+      display: block;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    .a4 {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+    .slider {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 3 / 2; 
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  object-fit: cover;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.slider button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slider .prev {
+  left: 1px;
+}
+
+.slider .next {
+  right: 1px;
+}
+.slider button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.slider:hover button {
+  opacity: 1;
+  pointer-events: auto;
+}
+h4{
+  font-size: 45px;
+  color: #0400ff;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 1rem;
+}
+
+.cards {
+  flex: 1 1 600px;
+  max-width: 1020px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cards img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+    
+  </style>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.slider').forEach(slider => {
+      const wrapper = slider.querySelector('.slider-wrapper');
+      const slides = wrapper.querySelectorAll('.slide');
+      const prev = slider.querySelector('.prev');
+      const next = slider.querySelector('.next');
+      let current = 0;
+
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        wrapper.style.transform = `translateX(-${index * 100}%)`;
+        current = index;
+      }
+
+      function nextSlide() {
+        goToSlide(current + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(current - 1);
+      }
+
+      next.addEventListener('click', nextSlide);
+      prev.addEventListener('click', prevSlide);
+    });
+  });
+</script>
+</head>
+<body>
+
+  <header>
+    <h1>Familia Pereira Medel </h1>
+  </header>
+
+  <nav>
+    <a href="FamiliaFuentesPereirayOlivares.html">FamiliaFuentesPereiraYOlivares</a>
+  </nav>
+<br>
+  <footer>
+    <br>
+    &copy; PereiraMedel
+  </footer>
+
+</body>
+</html>
